@@ -8,7 +8,6 @@ const render = require('../lib/render');
 
 function search(req, res) {
 	const parsedUrl = url.parse(req.url, true);
-	// console.log(parsedUrl.query);
 	const title = parsedUrl.query.title;
 
 
