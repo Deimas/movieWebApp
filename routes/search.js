@@ -1,10 +1,6 @@
-// const fs = require('fs');
-// const path = require('path');
 const url = require('url');
 
-
 const omdb = require('../lib/moviedb');
-const render = require('../lib/render');
 
 function search(req, res) {
 	const parsedUrl = url.parse(req.url, true);
@@ -13,10 +9,10 @@ function search(req, res) {
 
 	omdb.get(title, (error, movie) => {
 		if (error) {
-			return render(res, 'error.html', { error: error.message });
+			return res.render('error.html', { error: error.message });
 		}
 
-		render(res, 'movie.html', movie);
+		res.render('movie.html', movie);
 	});
 
 	// const stream = fs.createReadStream(path.join(__dirname,'..', 'public', 'movie.html'));
