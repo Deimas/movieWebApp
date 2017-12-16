@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/app.css">
+        <title>{{data.name}}</title>
+    </head>
+
+    <body id="movie">
+        <div class="card">
+            <div class="card-media">
+                <img src="{{data.poster_url}}" />
+            </div>
+            
+            <div class="card-content">
+                <h1 class="card-title">{{data.name}}</h1>
+                <div>
+                    <small>{{data.year}}</small> &bull;
+                    <small>{{data.director}}</small> &bull;
+                    <small>143 min</small> &bull;
+                    <small>{{data.rating}}/10</small>
+                </div>
+                <p>{{data.plot}}</p>
+                <a href="http://www.imdb.com/title/{{data.imdb_id}}" target="_blank">Подробнее на IMDB</a>
+            </div>
+        </div>
+    </body>
+</html>
